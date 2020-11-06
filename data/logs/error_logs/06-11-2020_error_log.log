@@ -1,0 +1,59 @@
+[Fri, 06 Nov 2020 15:57:26 +0700] [localhost] [::1] [Notice(8): Undefined variable: post] [FILE: /modules/samples/admin/list.php] [LINE: 80] [TRACE:]
+#1  LINE: 175   FILE: /admin/index.php
+
+[Fri, 06 Nov 2020 16:21:41 +0700] [localhost] [::1] [Notice(8): Undefined variable: post] [FILE: /modules/samples/admin/list.php] [LINE: 84] [TRACE:]
+#1  LINE: 175   FILE: /admin/index.php
+
+[Fri, 06 Nov 2020 16:24:16 +0700] [localhost] [::1] [Notice(8): Undefined variable: post] [FILE: /modules/samples/admin/list.php] [LINE: 94] [TRACE:]
+#1  LINE: 175   FILE: /admin/index.php
+
+[Fri, 06 Nov 2020 16:24:31 +0700] [localhost] [::1] [Notice(8): Undefined variable: post] [FILE: /modules/samples/admin/list.php] [LINE: 96] [TRACE:]
+#1  LINE: 175   FILE: /admin/index.php
+
+[Fri, 06 Nov 2020 16:27:01 +0700] [localhost] [::1] [Error(1): Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`updatetime`=? WHERE 79' at line 2 in C:\xampp\htdocs\nukeviet\vendor\vinades\nukeviet\Core\Database.php:520
+Stack trace:
+#0 C:\xampp\htdocs\nukeviet\vendor\vinades\nukeviet\Core\Database.php(520): PDO->prepare('UPDATE `nv4_sam...', Array)
+#1 C:\xampp\htdocs\nukeviet\modules\samples\admin\main.php(60): NukeViet\Core\Database->prepare('UPDATE `nv4_sam...')
+#2 C:\xampp\htdocs\nukeviet\admin\index.php(175): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown] [FILE: /vendor/vinades/nukeviet/Core/Database.php] [LINE: 520]
+[Fri, 06 Nov 2020 16:39:35 +0700] [localhost] [::1] [Notice(8): Undefined variable: post] [FILE: /modules/samples/admin/list.php] [LINE: 101] [TRACE:]
+#1  LINE: 175   FILE: /admin/index.php
+
+[Fri, 06 Nov 2020 16:45:01 +0700] [localhost] [::1] [Notice(8): Undefined variable: post] [FILE: /modules/samples/admin/list.php] [LINE: 110] [TRACE:]
+#1  LINE: 175   FILE: /admin/index.php
+
+[Fri, 06 Nov 2020 16:48:22 +0700] [localhost] [::1] [Notice(8): Undefined variable: post] [FILE: /modules/samples/admin/list.php] [LINE: 113] [TRACE:]
+#1  LINE: 175   FILE: /admin/index.php
+
+[Fri, 06 Nov 2020 16:50:03 +0700] [localhost] [::1] [Notice(8): Undefined variable: post] [FILE: /modules/samples/admin/list.php] [LINE: 111] [TRACE:]
+#1  LINE: 175   FILE: /admin/index.php
+
+[Fri, 06 Nov 2020 17:12:50 +0700] [localhost] [::1] [Notice(8): Undefined variable: post] [FILE: /modules/samples/admin/list.php] [LINE: 100] [TRACE:]
+#1  LINE: 175   FILE: /admin/index.php
+
+[Fri, 06 Nov 2020 17:13:22 +0700] [localhost] [::1] [Notice(8): Undefined variable: post] [FILE: /modules/samples/admin/list.php] [LINE: 103] [TRACE:]
+#1  LINE: 175   FILE: /admin/index.php
+
+[Fri, 06 Nov 2020 17:13:28 +0700] [localhost] [::1] [Notice(8): Undefined variable: exe] [FILE: /modules/samples/admin/list.php] [LINE: 49] [TRACE:]
+#1  LINE: 175   FILE: /admin/index.php
+
+[Fri, 06 Nov 2020 17:13:48 +0700] [localhost] [::1] [Notice(8): Undefined variable: post] [FILE: /modules/samples/admin/list.php] [LINE: 104] [TRACE:]
+#1  LINE: 175   FILE: /admin/index.php
+
+[Fri, 06 Nov 2020 17:15:27 +0700] [localhost] [::1] [Notice(8): Undefined variable: post] [FILE: /modules/samples/admin/list.php] [LINE: 105] [TRACE:]
+#1  LINE: 175   FILE: /admin/index.php
+
+[Fri, 06 Nov 2020 17:15:53 +0700] [localhost] [::1] [Notice(8): Undefined variable: post] [FILE: /modules/samples/admin/list.php] [LINE: 106] [TRACE:]
+#1  LINE: 175   FILE: /admin/index.php
+
+[Fri, 06 Nov 2020 17:18:31 +0700] [localhost] [::1] [Error(1): Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FROM `nv4_samples` SET weight= 2 WHERE id=79' at line 1 in C:\xampp\htdocs\nukeviet\vendor\vinades\nukeviet\Core\Database.php:495
+Stack trace:
+#0 C:\xampp\htdocs\nukeviet\vendor\vinades\nukeviet\Core\Database.php(495): PDO->query('UPDATE FROM `nv...')
+#1 C:\xampp\htdocs\nukeviet\modules\samples\admin\list.php(55): NukeViet\Core\Database->query('UPDATE FROM `nv...')
+#2 C:\xampp\htdocs\nukeviet\admin\index.php(175): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown] [FILE: /vendor/vinades/nukeviet/Core/Database.php] [LINE: 495]
+[Fri, 06 Nov 2020 17:39:58 +0700] [localhost] [::1] [Notice(8): Undefined variable: post] [FILE: /modules/samples/admin/list.php] [LINE: 114] [TRACE:]
+#1  LINE: 175   FILE: /admin/index.php
+

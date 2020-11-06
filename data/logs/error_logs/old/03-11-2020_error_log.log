@@ -1,0 +1,22 @@
+[Tue, 03 Nov 2020 20:27:41 +0700] [localhost] [::1] [Notice(8): Undefined index: fullname] [FILE: /modules/samples/admin/main.php] [LINE: 42]
+[Tue, 03 Nov 2020 20:37:52 +0700] [localhost] [::1] [Notice(8): Undefined index: district] [FILE: /modules/samples/admin/main.php] [LINE: 46]
+[Tue, 03 Nov 2020 20:37:52 +0700] [localhost] [::1] [Notice(8): Undefined index: provide] [FILE: /modules/samples/admin/main.php] [LINE: 47]
+[Tue, 03 Nov 2020 20:41:29 +0700] [localhost] [::1] [Error(1): Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number in C:\xampp\htdocs\nukeviet\vendor\vinades\nukeviet\Core\Database.php:611
+Stack trace:
+#0 C:\xampp\htdocs\nukeviet\vendor\vinades\nukeviet\Core\Database.php(611): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\nukeviet\modules\samples\admin\main.php(52): NukeViet\Core\NukeVietPDOStatement->execute()
+#2 C:\xampp\htdocs\nukeviet\admin\index.php(175): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown] [FILE: /vendor/vinades/nukeviet/Core/Database.php] [LINE: 611]
+[Tue, 03 Nov 2020 20:46:11 +0700] [localhost] [::1] [Notice(8): Undefined index: district] [FILE: /modules/samples/admin/main.php] [LINE: 45]
+[Tue, 03 Nov 2020 20:50:56 +0700] [localhost] [::1] [Notice(8): Undefined index: district] [FILE: /modules/samples/admin/main.php] [LINE: 50]
+[Tue, 03 Nov 2020 21:19:44 +0700] [localhost] [::1] [Notice(8): Array to string conversion] [FILE: /includes/xtemplate.class.php] [LINE: 893]
+[Tue, 03 Nov 2020 22:07:57 +0700] [localhost] [::1] [Notice(8): Undefined variable: post] [FILE: /modules/samples/admin/list.php] [LINE: 31]
+[Tue, 03 Nov 2020 22:23:57 +0700] [localhost] [::1] [Notice(8): Undefined variable: post] [FILE: /modules/samples/admin/list.php] [LINE: 40]
+[Tue, 03 Nov 2020 22:59:12 +0700] [localhost] [::1] [Error(1): Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`updatetime`=? WHERE 28' at line 2 in C:\xampp\htdocs\nukeviet\vendor\vinades\nukeviet\Core\Database.php:520
+Stack trace:
+#0 C:\xampp\htdocs\nukeviet\vendor\vinades\nukeviet\Core\Database.php(520): PDO->prepare('UPDATE `nv4_sam...', Array)
+#1 C:\xampp\htdocs\nukeviet\modules\samples\admin\main.php(52): NukeViet\Core\Database->prepare('UPDATE `nv4_sam...')
+#2 C:\xampp\htdocs\nukeviet\admin\index.php(175): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown] [FILE: /vendor/vinades/nukeviet/Core/Database.php] [LINE: 520]

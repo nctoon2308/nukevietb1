@@ -1,0 +1,25 @@
+[Wed, 04 Nov 2020 08:36:58 +0700] [localhost] [::1] [Notice(8): Undefined variable: post] [FILE: /modules/samples/admin/list.php] [LINE: 40]
+[Wed, 04 Nov 2020 09:41:23 +0700] [localhost] [::1] [Notice(8): Undefined variable: post] [FILE: /modules/samples/admin/list.php] [LINE: 41] [TRACE:]
+#1  LINE: 175   FILE: /admin/index.php
+
+[Wed, 04 Nov 2020 09:47:37 +0700] [localhost] [::1] [Notice(8): Undefined variable: post] [FILE: /modules/samples/admin/list.php] [LINE: 50] [TRACE:]
+#1  LINE: 175   FILE: /admin/index.php
+
+[Wed, 04 Nov 2020 10:19:12 +0700] [localhost] [::1] [Warning(2): A non-numeric value encountered] [FILE: /modules/samples/admin/list.php] [LINE: 29] [TRACE:]
+#1  LINE: 175   FILE: /admin/index.php
+
+[Wed, 04 Nov 2020 10:19:12 +0700] [localhost] [::1] [Notice(8): Undefined variable: post] [FILE: /modules/samples/admin/list.php] [LINE: 61] [TRACE:]
+#1  LINE: 175   FILE: /admin/index.php
+
+[Wed, 04 Nov 2020 10:22:12 +0700] [localhost] [::1] [Error(1): Uncaught ArgumentCountError: Too few arguments to function XTemplate::assign(), 0 passed in C:\xampp\htdocs\nukeviet\modules\samples\admin\list.php on line 89 and at least 1 expected in C:\xampp\htdocs\nukeviet\includes\xtemplate.class.php:578
+Stack trace:
+#0 C:\xampp\htdocs\nukeviet\modules\samples\admin\list.php(89): XTemplate->assign()
+#1 C:\xampp\htdocs\nukeviet\admin\index.php(175): require('C:\\xampp\\htdocs...')
+#2 {main}
+  thrown] [FILE: /includes/xtemplate.class.php] [LINE: 578]
+[Wed, 04 Nov 2020 11:26:51 +0700] [localhost] [::1] [Notice(8): Undefined variable: post] [FILE: /modules/samples/admin/list.php] [LINE: 59] [TRACE:]
+#1  LINE: 175   FILE: /admin/index.php
+
+[Wed, 04 Nov 2020 11:37:28 +0700] [localhost] [::1] [Notice(8): Undefined variable: post] [FILE: /modules/samples/admin/list.php] [LINE: 80] [TRACE:]
+#1  LINE: 175   FILE: /admin/index.php
+
