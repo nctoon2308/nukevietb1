@@ -1,0 +1,5 @@
+[Sun, 08 Nov 2020 19:21:28 +0700] [localhost] [::1] [Error(1): Uncaught Error: Object of class NukeViet\Core\Database could not be converted to string in C:\xampp\htdocs\nukeviet\modules\samples\funcs\main.php:34
+Stack trace:
+#0 C:\xampp\htdocs\nukeviet\index.php(343): require()
+#1 {main}
+  thrown] [FILE: /modules/samples/funcs/main.php] [LINE: 34]

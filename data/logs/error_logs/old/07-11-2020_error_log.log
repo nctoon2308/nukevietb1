@@ -1,0 +1,69 @@
+[Sat, 07 Nov 2020 08:20:22 +0700] [localhost] [::1] [Notice(8): Undefined variable: post] [FILE: /modules/samples/admin/list.php] [LINE: 111] [TRACE:]
+#1  LINE: 175   FILE: /admin/index.php
+
+[Sat, 07 Nov 2020 08:22:44 +0700] [localhost] [::1] [Notice(8): Undefined variable: post] [FILE: /modules/samples/admin/list.php] [LINE: 116] [TRACE:]
+#1  LINE: 175   FILE: /admin/index.php
+
+[Sat, 07 Nov 2020 08:34:22 +0700] [localhost] [::1] [Notice(8): Undefined index: search-news] [FILE: /modules/search-news/admin/main.php] [LINE: 35] [TRACE:]
+#1  LINE: 175   FILE: /admin/index.php
+
+[Sat, 07 Nov 2020 08:34:25 +0700] [localhost] [::1] [Error(1): Uncaught Error: Call to undefined method NukeViet\Core\Database::sql_query() in C:\xampp\htdocs\nukeviet\modules\search-news\admin\main.php:18
+Stack trace:
+#0 C:\xampp\htdocs\nukeviet\admin\index.php(175): require()
+#1 {main}
+  thrown] [FILE: /modules/search-news/admin/main.php] [LINE: 18]
+[Sat, 07 Nov 2020 09:55:16 +0700] [localhost] [::1] [Error(1): Uncaught ArgumentCountError: Too few arguments to function nv_theme_samples_main(), 1 passed in C:\xampp\htdocs\nukeviet\modules\samples\funcs\main.php on line 50 and exactly 4 expected in C:\xampp\htdocs\nukeviet\modules\samples\theme.php:21
+Stack trace:
+#0 C:\xampp\htdocs\nukeviet\modules\samples\funcs\main.php(50): nv_theme_samples_main(Array)
+#1 C:\xampp\htdocs\nukeviet\index.php(343): require('C:\\xampp\\htdocs...')
+#2 {main}
+  thrown] [FILE: /modules/samples/theme.php] [LINE: 21]
+[Sat, 07 Nov 2020 10:15:15 +0700] [localhost] [::1] [Error(1): Uncaught Error: Call to undefined function nv_theme_samples_detail() in C:\xampp\htdocs\nukeviet\modules\samples\funcs\detail.php:24
+Stack trace:
+#0 C:\xampp\htdocs\nukeviet\index.php(343): require()
+#1 {main}
+  thrown] [FILE: /modules/samples/funcs/detail.php] [LINE: 24]
+[Sat, 07 Nov 2020 10:20:57 +0700] [localhost] [::1] [Error(1): Uncaught Error: Call to undefined function nv_theme_samples_detail() in C:\xampp\htdocs\nukeviet\modules\samples\funcs\detail.php:29
+Stack trace:
+#0 C:\xampp\htdocs\nukeviet\index.php(343): require()
+#1 {main}
+  thrown] [FILE: /modules/samples/funcs/detail.php] [LINE: 29]
+[Sat, 07 Nov 2020 10:20:57 +0700] [localhost] [::1] [Warning(2): Use of undefined constant id - assumed 'id' (this will throw an Error in a future version of PHP)] [FILE: /modules/samples/funcs/main.php] [LINE: 44] [TRACE:]
+#1  LINE: 343   FILE: /index.php
+
+[Sat, 07 Nov 2020 10:23:22 +0700] [localhost] [::1] [Notice(8): Undefined index: id] [FILE: /modules/samples/funcs/detail.php] [LINE: 24] [TRACE:]
+#1  LINE: 343   FILE: /index.php
+
+[Sat, 07 Nov 2020 10:23:22 +0700] [localhost] [::1] [Error(1): Uncaught Error: Call to undefined function nv_theme_samples_detail() in C:\xampp\htdocs\nukeviet\modules\samples\funcs\detail.php:27
+Stack trace:
+#0 C:\xampp\htdocs\nukeviet\index.php(343): require()
+#1 {main}
+  thrown] [FILE: /modules/samples/funcs/detail.php] [LINE: 27]
+[Sat, 07 Nov 2020 10:24:18 +0700] [localhost] [::1] [Error(1): Uncaught Error: Call to undefined function nv_theme_samples_detail() in C:\xampp\htdocs\nukeviet\modules\samples\funcs\detail.php:28
+Stack trace:
+#0 C:\xampp\htdocs\nukeviet\index.php(343): require()
+#1 {main}
+  thrown] [FILE: /modules/samples/funcs/detail.php] [LINE: 28]
+[Sat, 07 Nov 2020 10:26:26 +0700] [localhost] [::1] [Error(1): Uncaught Error: Call to undefined function nv_theme_samples_detail() in C:\xampp\htdocs\nukeviet\modules\samples\funcs\detail.php:30
+Stack trace:
+#0 C:\xampp\htdocs\nukeviet\index.php(343): require()
+#1 {main}
+  thrown] [FILE: /modules/samples/funcs/detail.php] [LINE: 30]
+[Sat, 07 Nov 2020 10:28:32 +0700] [localhost] [::1] [Notice(8): Undefined variable: result] [FILE: /modules/samples/funcs/detail.php] [LINE: 27] [TRACE:]
+#1  LINE: 343   FILE: /index.php
+
+[Sat, 07 Nov 2020 10:29:58 +0700] [localhost] [::1] [Error(1): Uncaught Error: Call to undefined function nv_theme_samples_detail() in C:\xampp\htdocs\nukeviet\modules\samples\funcs\detail.php:31
+Stack trace:
+#0 C:\xampp\htdocs\nukeviet\index.php(343): require()
+#1 {main}
+  thrown] [FILE: /modules/samples/funcs/detail.php] [LINE: 31]
+[Sat, 07 Nov 2020 10:31:43 +0700] [localhost] [::1] [Error(1): Uncaught Error: Call to undefined function nv_theme_samples_detail() in C:\xampp\htdocs\nukeviet\modules\samples\funcs\detail.php:32
+Stack trace:
+#0 C:\xampp\htdocs\nukeviet\index.php(343): require()
+#1 {main}
+  thrown] [FILE: /modules/samples/funcs/detail.php] [LINE: 32]
+[Sat, 07 Nov 2020 10:36:29 +0700] [localhost] [::1] [Error(1): Uncaught Error: Call to undefined function nv_theme_samples_detail() in C:\xampp\htdocs\nukeviet\modules\samples\funcs\detail.php:38
+Stack trace:
+#0 C:\xampp\htdocs\nukeviet\index.php(343): require()
+#1 {main}
+  thrown] [FILE: /modules/samples/funcs/detail.php] [LINE: 38]

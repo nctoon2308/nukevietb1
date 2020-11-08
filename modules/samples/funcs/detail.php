@@ -17,11 +17,50 @@ $key_words = $module_info['keywords'];
 
 $array_data = [];
 
+$array_mod_title[] = array(
+    'title' => $lang_module['main'],
+    'link' => nv_url_rewrite(NV_BASE_SITEURL . 'index.php?' . NV_LANG_VARIABLE . '=' . NV_LANG_DATA . '&amp;' . NV_NAME_VARIABLE . '=' .$module_name.'&amp;'
+        . NV_OP_VARIABLE . '=main',true)
+);
 //------------------
 // Viết code vào đây
+
+/*$sql = "SELECT * FROM `nv4_samples` WHERE id = " .$id;*/
+$id = $nv_Request->get_int('id','post,get',0);
+if ($id>0){
+    $sql = "SELECT * FROM `nv4_samples` WHERE id = " .$id;
+    $result = $db->query($sql);
+
+    if (!$row=$result->fetch()){
+       nv_redirect_location(NV_BASE_SITEURL . 'index.php?' . NV_LANG_VARIABLE . '=' . NV_LANG_DATA . '&amp;' . NV_NAME_VARIABLE . '=' .$module_name.'&amp;'
+           . NV_OP_VARIABLE . '=main');
+    }
+    else{
+        if ($row['gender']==1)
+            $row['gender'] = 'Nam';
+        elseif ($row['gender']==2)
+            $row['gender'] = 'Nu';
+        elseif ($row['gender']==3)
+            $row['gender'] = 'N/A';
+        else
+            $row['gender'] = 'Null';
+    }
+    $page_title = $row['fullname'];
+
+    $array_mod_title[] = array(
+        'title' => $row['fullname'],
+        'link' => nv_url_rewrite(NV_BASE_SITEURL . 'index.php?' . NV_LANG_VARIABLE . '=' . NV_LANG_DATA . '&amp;' . NV_NAME_VARIABLE . '=' .$module_name.'&amp;'
+            . NV_OP_VARIABLE . '=detail&id=' . $row['id'],true)
+    );
+
+}else{
+    nv_redirect_location(NV_BASE_SITEURL . 'index.php?' . NV_LANG_VARIABLE . '=' . NV_LANG_DATA . '&amp;' . NV_NAME_VARIABLE . '=' .$module_name.'&amp;'
+        . NV_OP_VARIABLE . '=main');
+}
+
 //------------------
 
-$contents = nv_theme_samples_detail($array_data);
+$contents = nv_theme_samples_detail($row);
 
 include NV_ROOTDIR . '/includes/header.php';
 echo nv_site_theme($contents);

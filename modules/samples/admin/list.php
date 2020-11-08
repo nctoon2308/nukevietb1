@@ -15,11 +15,16 @@ if (!defined('NV_IS_FILE_ADMIN')) {
 //xoa sp
 if ($nv_Request->isset_request('action','post,get')){
     $id = $nv_Request->get_int('id','post,get','');
-    $checksess = $nv_Request->get_title('checkess','post,get',0);
+    $checksess = $nv_Request->get_title('checksess','post,get',0);
+
 
     if($id>0 && $checksess==md5($id.NV_CHECK_SESSION)){
-        $db->query("DELETE FROM `nv4_samples` WHERE id=".$id);
+        $exe = $db->query("DELETE FROM `nv4_samples` WHERE id=".$id);
+        if ($exe){
+            die('OK');
+        }
     }
+    die('ERR');
 }
 
 //active
@@ -108,7 +113,7 @@ $xtpl->assign('NV_NAME_VARIABLE', NV_NAME_VARIABLE);
 $xtpl->assign('NV_OP_VARIABLE', NV_OP_VARIABLE);
 $xtpl->assign('MODULE_NAME', $module_name);
 $xtpl->assign('OP', $op);
-$xtpl->assign('POST',$post);
+/*$xtpl->assign('POST',$post);*/
 
 
 //-------------------------------

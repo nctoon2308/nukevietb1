@@ -4,12 +4,12 @@
 <div class="alert alert-warning" role="alert">{ERROR}</div>
 <!-- END: error -->
 
-<form action="{NV_BASE_ADMINURL}index.php?{NV_LANG_VARIABLE}={NV_LANG_DATA}&amp;{NV_NAME_VARIABLE}={MODULE_NAME}&amp;{NV_OP_VARIABLE}={OP}" method="post">
+<form enctype="multipart/form-data" action="{NV_BASE_ADMINURL}index.php?{NV_LANG_VARIABLE}={NV_LANG_DATA}&amp;{NV_NAME_VARIABLE}={MODULE_NAME}&amp;{NV_OP_VARIABLE}={OP}" method="post">
     <input type="hidden" name="id" value="{POST.id}">
     <table>
         <tr>
             <td>{LANG.name}</td>
-            <td><input type="text" name="fullname" id="fullname"></td>
+            <td><input type="text" name="fullname" id="fullname" value="{POST.fullname}"></td>
         </tr>
         <tr>
             <td>Số điện thoại</td>
@@ -27,21 +27,26 @@
                 <!-- END: gender -->
             </td>
         </tr>
-
+        <tr>
+            <td>Input image</td>
+            <td><input type="file" name="image"></td>
+        </tr>
+        <!--
         <tr>
             <td>Địa chỉ</td>
             <td>
                 <select name="provide" id="provide" onchange="change_provide()">
                     <option value="0">Chon thanh pho</option>
-                    <!-- BEGIN: provide -->
+
                     <option value="{PROVINCE.key}" {PROVINCE.selected}>{PROVINCE.title}</option>
-                    <!-- END: provide -->
+
                 </select>
                 <select name="district" id="district">
                     <option value="0">Chon quan huyen</option>
                 </select>
             </td>
         </tr>
+        -->
         <tr>
             <td>
                 <div class="text-center"><input class="btn btn-primary" name="submit" type="submit" value="{LANG.save}" /></div>

@@ -57,3 +57,9 @@ Stack trace:
 [Fri, 06 Nov 2020 17:39:58 +0700] [localhost] [::1] [Notice(8): Undefined variable: post] [FILE: /modules/samples/admin/list.php] [LINE: 114] [TRACE:]
 #1  LINE: 175   FILE: /admin/index.php
 
+[Fri, 06 Nov 2020 21:14:42 +0700] [localhost] [::1] [Notice(8): Undefined index: gender] [FILE: /modules/samples/admin/main.php] [LINE: 140] [TRACE:]
+#1  LINE: 175   FILE: /admin/index.php
+
+[Fri, 06 Nov 2020 21:14:42 +0700] [localhost] [::1] [Notice(8): Undefined index: provide] [FILE: /modules/samples/admin/main.php] [LINE: 149] [TRACE:]
+#1  LINE: 175   FILE: /admin/index.php
+

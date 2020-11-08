@@ -18,29 +18,43 @@ if (!defined('NV_IS_MOD_SAMPLES')) {
  * @param mixed $array_data
  * @return
  */
-function nv_theme_samples_main($array_data)
+function nv_theme_samples_main($array_data, $page, $perpage, $generate_page)
 {
-    global $module_info, $lang_module, $lang_global, $op;
+    global $module_info, $lang_module, $lang_global, $op, $module_name;
 
     $xtpl = new XTemplate($op . '.tpl', NV_ROOTDIR . '/themes/' . $module_info['template'] . '/modules/' . $module_info['module_theme']);
     $xtpl->assign('LANG', $lang_module);
     $xtpl->assign('GLANG', $lang_global);
+    $xtpl->assign('NV_BASE_SITEURL', NV_BASE_SITEURL);
+    $xtpl->assign('NV_NAME_VARIABLE', NV_NAME_VARIABLE);
+    $xtpl->assign('MODULE_NAME', $module_name);
+    $xtpl->assign('NV_OP_VARIABLE', NV_OP_VARIABLE);
+    $xtpl->assign('OP', $op);
+
 
     //------------------
     // Viết code vào đây
+    if (!empty($array_data)){
+        $i = ($page-1) * $perpage;
+        foreach ($array_data as $row){
+            $row['stt'] = $i+1;
+            $xtpl->assign('ROW',$row);
+            $xtpl->parse('main.loop');
+            $i++;
+        }
+    }
+    if ($generate_page){
+        $xtpl->assign('GENERATE_PAGE',$generate_page);
+        $xtpl->parse('main.GENERATE_PAGE');
+    }
+
     //------------------
 
     $xtpl->parse('main');
     return $xtpl->text('main');
 }
 
-/**
- * nv_theme_samples_detail()
- * 
- * @param mixed $array_data
- * @return
- */
-function nv_theme_samples_detail($array_data)
+function nv_theme_samples_detail($row)
 {
     global $module_info, $lang_module, $lang_global, $op;
 
@@ -48,32 +62,15 @@ function nv_theme_samples_detail($array_data)
     $xtpl->assign('LANG', $lang_module);
     $xtpl->assign('GLANG', $lang_global);
 
-    //------------------
-    // Viết code vào đây
-    //------------------
-
-    $xtpl->parse('main');
-    return $xtpl->text('main');
-}
-
-/**
- * nv_theme_samples_search()
- * 
- * @param mixed $array_data
- * @return
- */
-function nv_theme_samples_search($array_data)
-{
-    global $module_info, $lang_module, $lang_global, $op;
-
-    $xtpl = new XTemplate($op . '.tpl', NV_ROOTDIR . '/themes/' . $module_info['template'] . '/modules/' . $module_info['module_theme']);
-    $xtpl->assign('LANG', $lang_module);
-    $xtpl->assign('GLANG', $lang_global);
+    $xtpl->assign('DATA', $row);
+    $xtpl->parse('main.DATA');
 
     //------------------
     // Viết code vào đây
+
     //------------------
 
     $xtpl->parse('main');
+
     return $xtpl->text('main');
 }

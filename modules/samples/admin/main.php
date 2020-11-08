@@ -63,6 +63,11 @@ if (!empty($post['submit'])){
            /* INSERT INTO `nv4_samples`(`id`, `fullname`, `email`, `phone`, `gender`, `district`, `provide`, `active`, `addtime`, `updatetime`, `weight`)
             VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6],[value-7],[value-8],[value-9],[value-10],[value-11])
            */
+            $db->sqlreset()
+                ->select('COUNT(*)')
+                ->from($db_config['prefix'].'_'.'samples');
+            $sql2 = $db->sql();
+            $total = $db->query($sql2)->fetchColumn();
             $sql = "INSERT INTO `nv4_samples`( `fullname`, `email`, `phone`, `gender`, `district`,`provide`, `active`,  `addtime`,`updatetime`, `weight`)
                     VALUES (:fullname,:email,:phone,:gender, :district,:provide,:active, :addtime,:updatetime,:weight)";
             $s = $db->prepare($sql);
@@ -75,14 +80,17 @@ if (!empty($post['submit'])){
             $s->bindValue('active',1);
             $s->bindValue('addtime',NV_CURRENTTIME);
              $s->bindValue('updatetime',0);
-             $s->bindValue('weight',1);
+             $s->bindValue('weight',$total+1);
             $s->execute();
             $error[] = $lang_module['error_done'];
         }
     }
     if ($post['id']>0){
-        $sql3 = "SELECT * FROM nv4_samples WHERE id = ".$post['id'];
-        $post = $db->query($sql3)->fetch();
+        $sql = "SELECT * FROM nv4_samples WHERE id = ".$post['id'];
+        $post = $db->query($sql)->fetch();
+    }
+    else{
+
     }
 }
 
