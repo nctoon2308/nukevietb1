@@ -133,14 +133,18 @@ if (!empty($array_row)){
         if ($row['gender']==1)
             $row['gender'] = 'Nam';
         elseif ($row['gender']==2)
-            $row['gender'] = 'Nu';
+            $row['gender'] = 'Nữ';
         elseif ($row['gender']==3)
             $row['gender'] = 'N/A';
         else
             $row['gender'] = 'Null';
+
         $row['url_delete'] = NV_BASE_ADMINURL . 'index.php?' . NV_LANG_VARIABLE . '=' . NV_LANG_DATA . '&amp;' . NV_NAME_VARIABLE . '=' .$module_name. '&amp;' . NV_OP_VARIABLE .'=list&amp;id='.$row['id'].'&action=delete&checksess='. md5($row['id'].NV_CHECK_SESSION) ;
         $row['url_edit'] = NV_BASE_ADMINURL . 'index.php?' . NV_LANG_VARIABLE . '=' . NV_LANG_DATA . '&amp;' . NV_NAME_VARIABLE . '=' .$module_name.'&amp;' . NV_OP_VARIABLE . '=main&amp;id=' . $row['id'];
        $row['active'] = $row['active'] == 1 ? 'checked=checked' : '';
+      /* die();*/
+        if (!empty($row['image']))
+             $row['image'] = NV_BASE_SITEURL.NV_UPLOADS_DIR.'/'.$module_name.'/'. $row['image'];
 
         $xtpl->assign('ROW',$row);
         $xtpl->parse('main.loop');

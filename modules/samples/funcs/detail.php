@@ -46,6 +46,8 @@ if ($id>0){
             $row['gender'] = 'Null';
     }
     $page_title = $row['fullname'];
+    if (!empty(['image']))
+        $row['image'] = NV_BASE_SITEURL.NV_UPLOADS_DIR.'/'.$module_name.'/'. $row['image'];
 
     $array_mod_title[] = array(
         'title' => $row['fullname'],

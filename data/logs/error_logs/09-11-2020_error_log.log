@@ -1,0 +1,3 @@
+[Mon, 09 Nov 2020 09:42:31 +0700] [localhost] [::1] [Notice(8): Undefined variable: upload_info] [FILE: /modules/samples/admin/main.php] [LINE: 48] [TRACE:]
+#1  LINE: 175   FILE: /admin/index.php
+

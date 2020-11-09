@@ -22,6 +22,17 @@ if ($nv_Request->isset_request('change_provide','post')){
 
     }
 }
+//xu ly anh
+if ($nv_Request->isset_request('submit', 'post') and isset($_FILES, $_FILES['uploadfile'], $_FILES['uploadfile']['tmp_name']) and is_uploaded_file($_FILES['uploadfile']['tmp_name'])) {
+    //
+    $upload = new NukeViet\Files\Upload($admin_info['allow_files_type'], $global_config['forbid_extensions'], $global_config['forbid_mimes'], NV_UPLOAD_MAX_FILESIZE, NV_MAX_WIDTH, NV_MAX_HEIGHT);
+
+    $upload->setLanguage($lang_global);
+
+    $upload_info = $upload->save_file($_FILES['uploadfile'], NV_UPLOADS_REAL_DIR.'/'.$module_name, false,$global_config['nv_auto_resize']);
+
+    /*die($upload_info['basename']);*/
+}
 
 $post['id'] = $nv_Request->get_int('id','post,get','0');
 $post['fullname'] = $nv_Request->get_title('fullname','post','');
@@ -34,6 +45,7 @@ $post['active'] = $nv_Request->get_title('active','post','');
 $post['addtime'] = $nv_Request->get_title('addtime','post','');
 $post['updatetime'] = $nv_Request->get_title('updatetime','post','');
 $post['weight'] = $nv_Request->get_title('weight','post','');
+/*$post['image'] = $upload_info['basename'];*/
 $post['submit'] = $nv_Request->get_title('submit','post');
 
 if (!empty($post['submit'])){
@@ -68,8 +80,8 @@ if (!empty($post['submit'])){
                 ->from($db_config['prefix'].'_'.'samples');
             $sql2 = $db->sql();
             $total = $db->query($sql2)->fetchColumn();
-            $sql = "INSERT INTO `nv4_samples`( `fullname`, `email`, `phone`, `gender`, `district`,`provide`, `active`,  `addtime`,`updatetime`, `weight`)
-                    VALUES (:fullname,:email,:phone,:gender, :district,:provide,:active, :addtime,:updatetime,:weight)";
+            $sql = "INSERT INTO `nv4_samples`( `fullname`, `email`, `phone`, `gender`, `district`,`provide`, `active`,  `addtime`,`updatetime`, `weight`, `image`)
+                    VALUES (:fullname,:email,:phone,:gender, :district,:provide,:active, :addtime,:updatetime,:weight,:image)";
             $s = $db->prepare($sql);
             $s->bindValue('fullname',$post['fullname']);
             $s->bindValue('phone',$post['phone']);
@@ -81,6 +93,7 @@ if (!empty($post['submit'])){
             $s->bindValue('addtime',NV_CURRENTTIME);
              $s->bindValue('updatetime',0);
              $s->bindValue('weight',$total+1);
+             $s->bindValue('image',$post['image']);
             $s->execute();
             $error[] = $lang_module['error_done'];
         }
@@ -107,6 +120,8 @@ while ($province = $result->fetch()){
 
 //------------------------------
 // Viết code xử lý chung vào đây
+
+
 //------------------------------
 
 $xtpl = new XTemplate('main.tpl', NV_ROOTDIR . '/themes/' . $global_config['module_theme'] . '/modules/' . $module_file);

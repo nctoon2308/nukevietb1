@@ -5,22 +5,28 @@
         <caption>Thong tin thanh vien: {DATA.fullname}</caption>
         <tr>
             <td>
-            Ho Ten: {DATA.fullname}
+                <label for="">Ho Ten: </label>{DATA.fullname}
             </td>
         </tr>
         <tr>
             <td>
-            Phone: {DATA.phone}
+                <label for="">Phone: </label>{DATA.phone}
             </td>
         </tr>
         <tr>
             <td>
-            Email: {DATA.email}
+                <label for="">Email: </label>{DATA.email}
             </td>
         </tr>
         <tr>
             <td>
-            Gioi Tinh: {DATA.gender}
+                <label for="">Gioi Tinh: </label>{DATA.gender}
+            </td>
+        </tr>
+        <tr>
+            <td class="">
+                <label for="">Hinh Anh</label>
+                <img src="{DATA.image}" width="250px" height="250px">
             </td>
         </tr>
     </table>

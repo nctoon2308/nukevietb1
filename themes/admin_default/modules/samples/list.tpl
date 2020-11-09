@@ -6,9 +6,10 @@
             <th class="text-nowrap">So thu tu</th>
             <th class="text-nowrap">Ho ten</th>
             <th class="text-nowrap">Email</th>
+            <th class="text-nowrap">Image</th>
             <th class="text-nowrap">Phone</th>
             <th class="text-nowrap">Gioi tinh</th>
-            <th class="text-nowrap">Dia chi</th>
+
             <th class="text-nowrap">kich hoat</th>
             <th class="text-nowrap text-center">Chuc nang</th>
         </tr>
@@ -23,11 +24,15 @@
                         <!-- END: weight -->
                     </select>
                 </td>
+
                 <td class="">{ROW.fullname}</td>
                 <td class="">{ROW.email}</td>
+                <td class="">
+                    <img src="{ROW.image}" width="100px" height="100px">
+                </td>
                 <td class="">{ROW.phone}</td>
                 <td class="">{ROW.gender}</td>
-                <td class="">{ROW.address}</td>
+
                 <td class="">
                     <input onchange="nv_change_active({ROW.id})" type="checkbox" name="active" {ROW.active}>
                 </td>

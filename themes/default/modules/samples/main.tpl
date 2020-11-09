@@ -1,4 +1,5 @@
 <!-- BEGIN: main -->
+
 <div class="well">
     <form action="{NV_BASE_SITEURL}index.php" method="get">
         <input type="hidden" name="{NV_NAME_VARIABLE}" value="{MODULE_NAME}" />
@@ -19,7 +20,8 @@
         </div>
     </form>
 </div>
-<caption>Danh sach thanh vien</caption>
+
+<caption class="caption carousel-caption">Danh sach thanh vien</caption>
 <div class="table-responsive">
     <table class="table table-striped table-bordered table-hover">
         <thead>
